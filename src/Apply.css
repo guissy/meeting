@@ -1,0 +1,245 @@
+.main {
+    background: url(./assets/images/bg2.jpg)no-repeat top center;
+    background-size: 100% 100%;
+}
+
+.same640 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline-offset: 0;
+}
+
+:focus {
+    outline: none;
+}
+
+.baom-tit {
+    padding: 7vh 0 0;
+}
+
+#form {
+    padding: 45px 0 30px;
+}
+
+.form-box {
+    background: url(./assets/images/infocon.png)no-repeat top center;
+    background-size: 100% 100%;
+}
+
+.form-group {
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid #00ffff;
+    box-shadow: inset 0 0 13px rgba(0, 255, 255, 0.5);
+    margin-bottom: 15px;
+}
+
+.form-group.error {
+    border-color: #b4273a;
+    box-shadow: inset 0 0 13px rgba(255, 15, 15, 0.5);
+}
+
+.form-groupL {
+    color: #00ffff;
+    text-align: justify;
+    font-size: 12px;
+    width: 70px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    border-right: 1px solid #00FFFF;
+    overflow: hidden;
+}
+.error > .form-groupL{
+    border-color: #b4273a;
+}
+
+.form-groupL i {
+    width: 100%;
+    display: inline-block;
+}
+
+.form-groupR {
+    position: relative;
+    float: right;
+    width: calc(100% - 75px);
+}
+
+.form-groupR input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #00ffff;
+    padding: 0 5px;
+}
+
+.getCode {
+    font-size: 12px;
+    color: #00ffff;
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    line-height: 30px;
+    border-left: 1px solid #00FFFF;
+    padding: 0 5px;
+}
+
+.error > .form-groupR > .getCode {
+    border-color: #b4273a;
+}
+
+.getCheakCode {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.getCheakCode img {
+    height: 30px;
+}
+
+.form-groupR .getCodeInput {
+    padding-right: 80px;
+}
+
+.sure-box {
+    position: relative;
+    margin: 2vh 0;
+}
+
+.submitBtn {
+    position: absolute;
+    z-index: 1000;
+    display: block;
+    width: 33%;
+    height: 43%;
+    /*background: rgba(255,255,255,0.2)!important;*/
+    top: 12%;
+    left: 34%;
+    cursor: pointer;
+}
+.submitBtn[disabled] {
+    opacity: 0.1;
+}
+
+.loading-box,
+.msg-box,
+.domain-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 750px;
+    z-index: 10000;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    transition: all 0.8s;
+}
+
+.domain-list {
+    width: 80%;
+    background: #fff;
+    padding: 20px 0;
+    margin: 8vh auto 0;
+}
+
+.domain-list ul li {
+    font-size: 14px;
+    padding: 8px 20px;
+}
+
+.domain-list ul .activeli {
+    background: rgba(0, 255, 255, 0.3);
+}
+
+.loading-box > .layui-layer-loading {
+    border-radius: 100%;
+    background: 0 0;
+    box-shadow: none;
+    border: none;
+}
+.layui-layer, .layui-layer-shade {
+    position: fixed;
+    _position: absolute;
+    pointer-events: auto;
+}
+.layui-layer-content {
+    position: relative;
+}
+.layui-layer-loading .layui-layer-content {
+    width: 60px;
+    height: 24px;
+    background: url(./assets/images/loading-0.gif) no-repeat;
+}
+.layui-layer-setwin {
+    position: absolute;
+    right: 15px;
+    *right: 0;
+    top: 15px;
+    font-size: 0;
+    line-height: initial;
+}
+
+
+
+/** 弹出消息 */
+.layui-layer-dialog {
+    background-color: #fff;
+    border-radius: 2px;
+}
+.layui-layer-dialog .layui-layer-padding {
+    padding: 20px 20px 20px 55px;
+    text-align: left;
+}
+
+.layui-layer-ico.layui-layer-ico1 {
+    background-position: -30px 0;
+}
+.layui-layer-ico {
+    background: url(./assets/images/icon.png) no-repeat;
+}
+.layui-layer-dialog .layui-layer-content .layui-layer-ico {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+}
+.layui-layer-dialog .layui-layer-padding {
+    padding: 20px 20px 20px 55px;
+    text-align: left;
+}
+.layui-layer-dialog .layui-layer-content {
+    position: relative;
+    /*padding: 20px;*/
+    line-height: 24px;
+    word-break: break-all;
+    overflow: hidden;
+    font-size: 14px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.layui-layer-msg {
+    min-width: 180px;
+    border: 1px solid #D3D4D3;
+    box-shadow: none;
+    z-index: 19891027;
+    top: 335px;
+    left: 117px;
+}

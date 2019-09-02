@@ -1,33 +1,137 @@
-.App {
-  text-align: center;
+img {
+    border: none;
+    max-width: 100%;
+    pointer-events: none;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.page-loading,
+.bannerBox {
+    height: 100vh;
+    background: url(assets/images/bg1.jpg) no-repeat top center;
+    background-size: 100% 100%;
+    z-index: 99999;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.page-loading {
+    padding-top: 35%;
+    text-align: center;
+    font-size: 30px;
+    color: #F8F8F8;
+    text-shadow: 0 0 6px #00ffff;
 }
 
-.App-link {
-  color: #61dafb;
+.bannerBox .pageText1 {
+    position: absolute;
+    top: 53.7%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bannerBox .pageText2 {
+    position: absolute;
+    top: 68%;
+}
+
+.free-btn1 {
+    bottom: 12.5%;
+}
+
+.free-btn {
+    position: absolute;
+    display: block;
+    width: 33.33%;
+    z-index: 1000;
+    left: 50%;
+    left: 33.33%;
+    -webkit-animation: bounceIn 2s infinite ease-in-out forwards;
+    animation: bounceIn 2s infinite ease-in-out forwards;
+}
+
+.arrow-box {
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50%;
+    z-index: 900;
+}
+
+.arrow-box .arrow {
+    z-index: 999;
+    animation: start 1.5s infinite ease-in-out;
+    display: block;
+    margin: 15px auto 0 auto;
+    width: 20px;
+    height: 15px;
+}
+
+.f0 {
+    position: relative;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
+.free-btn2 {
+    bottom: 16.5%;
+}
+.f0 img {
+    vertical-align: bottom;
+}
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 1;
+        transform: scale3d(0.6, 0.6, 0.6);
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes start {
+
+    0%,
+    30% {
+        opacity: 0;
+        -webkit-transform: translate(0, -8px);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0, 10px);
+    }
 }
