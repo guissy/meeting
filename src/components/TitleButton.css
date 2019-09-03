@@ -1,0 +1,62 @@
+.title-button-container {
+    width: 80px;
+    height: 27px;
+    border-radius: 13px;
+    margin: 25px auto 15px;
+    background: url('../assets/btn_bg_apply.png') no-repeat center center;
+    background-size: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 27px;
+}
+
+.ball-scale {
+    position: relative;
+    animation: ball-scale-inner 3s 0s ease infinite;
+}
+.ball-scale::after,
+.ball-scale::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 27px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 5px #00ffde inset;
+    animation: ball-scale 2s 0s ease infinite;
+}
+.ball-scale::after {
+    animation-delay: 1s;
+}
+
+@keyframes ball-scale {
+    0% {
+        transform: scale(1.05, 1.05);
+        opacity: 1;
+    }
+
+    90% {
+        transform: scale(1.15, 1.4);
+        opacity: 0
+    }
+
+    100% {
+        transform: scale(1.05, 1.2);
+        opacity: 0
+    }
+}
+
+@keyframes ball-scale-inner {
+    0% {
+        transform: scale(0.98, 0.98);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1, 1);
+        opacity: 0.9
+    }
+}

@@ -1,0 +1,25 @@
+.title-main {
+    position: relative;
+    width: 334px;
+    height: 163px;
+    margin: 0 auto;
+    text-align: center;
+    background: url("../assets/h1_bg2.png") no-repeat center center;
+    background-size: 100%;
+}
+.title-main::before {
+    content: '';
+    width: 15px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*.h1-bg {*/
+/*    width: 100%;*/
+/*}*/
+.h1-txt {
+    width: 184px;
+    display: inline-block;
+    vertical-align: middle;
+}
