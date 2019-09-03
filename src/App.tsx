@@ -50,7 +50,7 @@ const Main: React.FC<{ toForm: () => void }> = ({ toForm }) => {
         <img src={arrow} className="arrow"/>
       </div>
       <TitleBox img={title1} style={{marginTop: '20px'}}/>
-      <img className="body2" src={body2} />
+      <img className="body2" src={body2} height={396} />
       <div className="arrow-box">
         <img src={arrow} className="arrow"/>
       </div>

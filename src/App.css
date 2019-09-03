@@ -6,8 +6,8 @@ img {
 
 .page-loading,
 .bannerBox {
-    min-height: 1400px;
-    background: url(assets/bg0.png) no-repeat top center;
+    min-height: 1500px;
+    background: #0683ff url(assets/bg0.png) no-repeat top center;
     background-size: 100% 101%;
     z-index: 99999;
     position: relative;
