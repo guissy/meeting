@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f07e34fcd912d7ecb2e5d6ef8633ee8",
+    "revision": "1adac97b73c12b83222beeae6ebfdf8a",
     "url": "/meeting/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/meeting/static/css/4.00f06f27.chunk.css"
   },
   {
-    "revision": "c2141c60e2d7a0207fca",
-    "url": "/meeting/static/css/main.0ed4dc0c.chunk.css"
+    "revision": "031ed2137f2beaf0b5db",
+    "url": "/meeting/static/css/main.06be70ba.chunk.css"
   },
   {
     "revision": "d8a62876a35a8d0edc61",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/meeting/static/js/4.f8dbf04b.chunk.js"
   },
   {
-    "revision": "c2141c60e2d7a0207fca",
-    "url": "/meeting/static/js/main.07ac5529.chunk.js"
+    "revision": "031ed2137f2beaf0b5db",
+    "url": "/meeting/static/js/main.321c84ef.chunk.js"
   },
   {
     "revision": "34bb4c011440a53eb722",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9ce017f38bfea633cc65c08750c6654c",
     "url": "/meeting/static/media/btn_bg_apply.9ce017f3.png"
+  },
+  {
+    "revision": "972d83542a26ceb8e3d0f7f2861428fa",
+    "url": "/meeting/static/media/compony_logo.972d8354.png"
   },
   {
     "revision": "d610ecea8433d92efc2765936d21c19c",
