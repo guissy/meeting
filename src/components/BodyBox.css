@@ -2,9 +2,11 @@
     position: relative;
     margin: -19px auto 0;
     width: calc(100% - 38px);
+    min-height: 296px;
     padding: 24px 19px;
     border: 5px solid #39B8FF;
     border-image: linear-gradient(90deg, #72EDDB 0%, #39B8FF 100%) 10 10 stretch;
+    z-index: -1;
 }
 .body-box::after {
     content: '';

@@ -25,7 +25,7 @@ const Store = React.createContext(null as unknown as StoreEntity);
 
 const Main: React.FC<{ toForm: () => void }> = ({ toForm }) => {
   return <>
-    <div className="banner-box bannerBox" style={{paddingTop: '100px'}}>
+    <div className="bannerBox">
       <TitleMain />
       <section className="time-place">
         <p>2019.9.17</p>

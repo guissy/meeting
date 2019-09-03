@@ -1,8 +1,8 @@
 .title-main {
-    position: relative;
+    /*position: relative;*/
     width: 334px;
     height: 163px;
-    margin: 0 auto;
+    margin: 100px auto 0;
     text-align: center;
     background: url("../assets/h1_bg2.png") no-repeat center center;
     background-size: 100%;

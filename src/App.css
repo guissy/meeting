@@ -6,11 +6,11 @@ img {
 
 .page-loading,
 .bannerBox {
-    min-height: 1500px;
+    position: absolute;
+    min-height: 1390px;
     background: #0683ff url(assets/bg0.png) no-repeat top center;
     background-size: 100% 101%;
     z-index: 99999;
-    position: relative;
 }
 
 .page-loading {
@@ -60,11 +60,12 @@ img {
 
 .body2 {
     padding: 15px 20px 0 15px;
+    width: 100%;
+    height: auto;
 }
 .company-logo {
     display: inline-block;
     padding: 30px calc((100% - 263px) / 2);
-    /*width: 263px;*/
 }
 
 @keyframes bounceIn {
