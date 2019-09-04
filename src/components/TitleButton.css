@@ -1,14 +1,14 @@
 .title-button-container {
-    width: 80px;
-    height: 27px;
-    border-radius: 13px;
+    width: 21.7%;
+    height: 7.3vw;
+    border-radius: 3.65vw;
     margin: 25px auto 15px;
     background: url('../assets/btn_bg_apply.png') no-repeat center center;
     background-size: 100%;
     text-align: center;
     color: #ffffff;
-    font-size: 12px;
-    line-height: 27px;
+    font-size: 2.4vw;
+    line-height: 7.3vw;
 }
 
 .ball-scale {
@@ -21,15 +21,25 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 80px;
-    height: 27px;
-    border-radius: 14px;
+    width: 100%;
+    height: 100%;
+    border-radius: 3.65vw;
     border: 1px solid rgba(0, 255, 255, 0.5);
     box-shadow: 0 0 5px #00ffde inset;
     animation: ball-scale 2s 0s ease infinite;
 }
 .ball-scale::after {
     animation-delay: 1s;
+}
+
+@media screen and (min-width: 750px)  {
+    .title-button-container {
+        font-size: 19px;
+    }
+    .ball-scale::after,
+    .ball-scale::before {
+        display: none;
+    }
 }
 
 @keyframes ball-scale {

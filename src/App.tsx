@@ -24,10 +24,12 @@ interface StoreEntity {
 const Store = React.createContext(null as unknown as StoreEntity);
 
 const Main: React.FC<{ toForm: () => void }> = ({ toForm }) => {
+  const w = document.documentElement.clientWidth;
+  const fontSize = Math.min(Math.ceil(12 + (w - 375) / 81), 18);
   return <>
     <div className="bannerBox">
       <TitleMain />
-      <section className="time-place">
+      <section className="time-place" style={{fontSize}}>
         <p>2019.9.17</p>
         <p>深圳—科兴科学园国际会议中心3楼</p>
       </section>
