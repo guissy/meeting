@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9ce0871d54345654487fa6a98448961f",
+    "revision": "ef013fe2bbf3c7df60217ecafc175084",
     "url": "/meeting/index.html"
   },
   {
-    "revision": "5e05ac1d32af09400b52",
-    "url": "/meeting/static/css/main.510f0b09.chunk.css"
+    "revision": "47b8b999cef67da5aa69",
+    "url": "/meeting/static/css/main.d61e6bae.chunk.css"
   },
   {
     "revision": "2eace40db50a78aebf3e",
     "url": "/meeting/static/js/2.178329a5.chunk.js"
   },
   {
-    "revision": "5e05ac1d32af09400b52",
-    "url": "/meeting/static/js/main.3cfff023.chunk.js"
+    "revision": "47b8b999cef67da5aa69",
+    "url": "/meeting/static/js/main.e35d6eee.chunk.js"
   },
   {
     "revision": "576ff1e8567a522cfb12",
@@ -42,5 +42,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e3ff55b64456e6fe61babc70d7ab1e3a",
     "url": "/meeting/static/media/h1_txt.e3ff55b6.png"
+  },
+  {
+    "revision": "551539f873d9ebe0792b120a9867d399",
+    "url": "/meeting/static/media/icon.551539f8.png"
   }
 ]);
