@@ -1,0 +1,121 @@
+.message-box,
+.form-box {
+    background: #00a9c0 url('assets/form_bg.png') no-repeat;
+    background-size: 100%;
+    height: 640px;
+}
+
+.form-box::before {
+    content: '';
+    display: block;
+    padding-top: 30px;
+    margin-left: 8px;
+    width: 72px;
+    height: 72px;
+    background: url('assets/dot.png') no-repeat center center;
+    background-size: 100%;
+    box-sizing: content-box;
+}
+
+
+.h1-txt2 {
+    width: 184px;
+    display: block;
+    vertical-align: middle;
+    margin: -24px auto 112px;
+}
+
+.input-label {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    transition: transform 0.3s;
+    pointer-events: none;
+}
+
+.input-label::after {
+    content: '';
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 4px solid #73ecdb;
+    border-image: radial-gradient(#73ecdb 0%, rgba(115, 236, 219, 0) 50%) 10 10 stretch;
+}
+
+.input-wrap {
+    margin: 28px auto 66px;
+    width: 65%;
+    max-width: 488px;
+    text-align: center;
+    border: 0;
+    border-top: 7px solid #73ecdb;
+    border-image: linear-gradient(90deg, #73ecdb 0%, #39B8FF 100%) 10 10 stretch;
+    height: 45px;
+    background: #6ba1df;
+}
+
+.input-wrap > input {
+    border-width: 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: 900;
+}
+.input-wrap::before {
+    content: '';
+    position: absolute;
+    display: block;
+    border-left: 1px solid #ffffff;
+    height: 18px;
+    left: 50%;
+    transform: translateY(10px);
+    animation: hidecircle 1s infinite ease-in-out forwards;
+}
+.message-box>.input-wrap::before,
+.input-wrap.editing::before {
+    display: none;
+}
+.input-wrap > input::-webkit-input-placeholder {
+    color: #ffffff;
+    /*font-weight: 100;*/
+    /*transform: scaleY(1.2);*/
+    /*animation: hidecircle 2s infinite ease-in-out forwards;*/
+}
+
+.bottom {
+    margin-top: 80px;
+}
+
+
+
+.message-box {
+    padding-top: 90px;
+    line-height: 24px;
+    background-size: 100vw 100vh;
+}
+
+.message-box > .input-label {
+    font-size: 18px;
+    line-height: 28px;
+}
+.message-box > .input-wrap {
+    height: auto;
+    font-size: 12px;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+@keyframes hidecircle {
+    0%,
+    50%
+    {
+        opacity: 0;
+    }
+    51%,
+    100%
+    {
+        opacity: 1;
+    }
+}

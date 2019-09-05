@@ -1,0 +1,92 @@
+.loading-box,
+.msg-box,
+.domain-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 750px;
+    z-index: 10000;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    transition: all 0.8s;
+}
+
+.loading-box > .layui-layer-loading {
+    border-radius: 100%;
+    background: 0 0;
+    box-shadow: none;
+    border: none;
+}
+.layui-layer, .layui-layer-shade {
+    position: fixed;
+    _position: absolute;
+    pointer-events: auto;
+}
+.layui-layer-content {
+    position: relative;
+}
+.layui-layer-loading .layui-layer-content {
+    width: 60px;
+    height: 24px;
+    background: url(../assets/images/loading-0.gif) no-repeat;
+}
+.layui-layer-setwin {
+    position: absolute;
+    right: 15px;
+    *right: 0;
+    top: 15px;
+    font-size: 0;
+    line-height: initial;
+}
+
+
+
+/** 弹出消息 */
+.layui-layer-dialog {
+    background-color: #fff;
+    border-radius: 2px;
+}
+.layui-layer-dialog .layui-layer-padding {
+    padding: 20px 20px 20px 55px;
+    text-align: left;
+}
+
+.layui-layer-ico.layui-layer-ico1 {
+    background-position: -30px 0;
+}
+.layui-layer-ico {
+    background: url(../assets/images/icon.png) no-repeat;
+}
+.layui-layer-dialog .layui-layer-content .layui-layer-ico {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+}
+.layui-layer-dialog .layui-layer-padding {
+    padding: 20px 20px 20px 55px;
+    text-align: left;
+}
+.layui-layer-dialog .layui-layer-content {
+    position: relative;
+    /*padding: 20px;*/
+    line-height: 24px;
+    word-break: break-all;
+    overflow: hidden;
+    font-size: 14px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.layui-layer-msg {
+    min-width: 180px;
+    border: 1px solid #D3D4D3;
+    box-shadow: none;
+    z-index: 19891027;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

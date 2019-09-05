@@ -7,6 +7,7 @@ img {
 .page-loading,
 .bannerBox {
     position: absolute;
+    /*width: 100%;*/
     /*min-height: 1390px;*/
     background: #0683ff url(assets/bg0.png) no-repeat top center;
     background-size: 100% 101%;
@@ -65,9 +66,9 @@ img {
 }
 .company-logo {
     display: block;
-    margin: 30px auto;
+    margin: 0 auto;
+    padding: 30px 0;
     width: 70%;
-    /*padding: 30px calc((100% - 263px) / 2);*/
 }
 
 @keyframes bounceIn {

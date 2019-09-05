@@ -1,72 +1,91 @@
 .title-button-container {
-    width: 21.7%;
-    height: 7.3vw;
-    border-radius: 3.65vw;
+    width: 90px;
+    height: 34px;
+    border-radius: 17px;
     margin: 25px auto 15px;
-    background: url('../assets/btn_bg_apply.png') no-repeat center center;
-    background-size: 100%;
     text-align: center;
     color: #ffffff;
-    font-size: 2.4vw;
-    line-height: 7.3vw;
 }
 
 .ball-scale {
     position: relative;
-    animation: ball-scale-inner 3s 0s ease infinite;
 }
-.ball-scale::after,
-.ball-scale::before {
-    content: '';
+.ball-scale > .border1 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 3.65vw;
-    border: 1px solid rgba(0, 255, 255, 0.5);
-    box-shadow: 0 0 5px #00ffde inset;
-    animation: ball-scale 2s 0s ease infinite;
-}
-.ball-scale::after {
-    animation-delay: 1s;
+    border-radius: 17px;
+    background: linear-gradient(90deg, #72EDDB 0%, #39B8FF 100%);
+    z-index: 1;
 }
 
+.ball-scale > .bg {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    background: url('../assets/btn_bg_apply.png') no-repeat center center;
+    background-size: 108%;
+    border-radius: 19px;
+    z-index: 1;
+}
+.ball-scale > .light1,
+.ball-scale > .light2,
+.ball-scale > .light3 {
+    /*content: '';*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+    box-shadow: 0 0 5px #00ffde inset;
+    animation: ball-scale 3s 0s none infinite;
+    z-index: 0;
+}
+.ball-scale > .light2 {
+    animation-delay: 1s;
+}
+.ball-scale > .light3 {
+    animation-delay: 2s;
+}
+.ball-scale > .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    z-index: 90;
+}
 @media screen and (min-width: 750px)  {
     .title-button-container {
         font-size: 19px;
-    }
-    .ball-scale::after,
-    .ball-scale::before {
-        display: none;
     }
 }
 
 @keyframes ball-scale {
     0% {
-        transform: scale(1.05, 1.05);
-        opacity: 1;
+        transform: scale(1.0, 1.05);
+        opacity: 0;
     }
 
-    90% {
-        transform: scale(1.15, 1.4);
+    30% {
+        transform: scale(1.08, 1.2);
+        opacity: 0.8;
+    }
+
+    95% {
+        transform: scale(1.25, 1.6);
         opacity: 0
     }
 
     100% {
-        transform: scale(1.05, 1.2);
+        transform: scale(1.0, 1.05);
         opacity: 0
     }
 }
 
-@keyframes ball-scale-inner {
-    0% {
-        transform: scale(0.98, 0.98);
-        opacity: 1;
-    }
-
-    50% {
-        transform: scale(1, 1);
-        opacity: 0.9
-    }
-}

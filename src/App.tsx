@@ -1,10 +1,5 @@
-import React, { useState, Suspense } from 'react';
-import pageText1 from "./assets/images/pageText1.png";
-import pageText2 from "./assets/images/pageText2.png";
-import freeBtn from "./assets/images/free-btn.png";
+import React, { Suspense, useState } from 'react';
 import arrow from "./assets/images/arrow.png";
-import page2 from "./assets/images/page2.jpg";
-import page3 from "./assets/images/page3.jpg";
 import './App.css';
 import TitleBox from './components/TitleBox';
 import title0 from './assets/title0.png';
@@ -14,7 +9,7 @@ import companyLogo from './assets/compony_logo.png';
 import TitleMain from './components/TitleMain';
 import BodyBox from './components/BodyBox';
 import TitleButton from './components/TitleButton';
-const Apply = React.lazy(() => import("./Apply"));
+import Form from './Form';
 
 interface StoreEntity {
   isForm: boolean;
@@ -27,7 +22,7 @@ const Main: React.FC<{ toForm: () => void }> = ({ toForm }) => {
   const w = document.documentElement.clientWidth;
   const fontSize = Math.min(Math.ceil(12 + (w - 375) / 81), 18);
   return <>
-    <div className="bannerBox">
+    <div className="bannerBox" hidden={false}>
       <TitleMain />
       <section className="time-place" style={{fontSize}}>
         <p>2019.9.17</p>
@@ -65,6 +60,7 @@ const Main: React.FC<{ toForm: () => void }> = ({ toForm }) => {
 const App: React.FC<{}> = ({}) => {
   const [isForm, setIsForm] = useState(false);
   const toForm = React.useCallback(() => setIsForm(true), []);
+  const toHome = React.useCallback(() => setIsForm(false), []);
   return (
     <Store.Provider value={{ isForm }}>
       <div className="main">
@@ -72,7 +68,7 @@ const App: React.FC<{}> = ({}) => {
           !isForm
             ? <Main toForm={toForm}/>
             : <Suspense fallback={<div className="page-loading">Loading...</div>}>
-              <Apply isForm={isForm}/>
+              <Form toHome={toHome}/>
             </Suspense>
         }
       </div>

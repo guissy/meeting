@@ -45,17 +45,6 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script>
-      var title = '2019腾讯安全国际技术峰会';
-      var desc = 'TenSec 2019，\n报名参与国际前沿安全技术峰会。 ';
-      var imgUrl = window.location.href + "/cover.png";
-      var link = window.location.href;
-      var pageName = "报名";
-      var PType = "228";
-    </script>
-    <script src="https://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
-    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-    <script src="https://img.huiyiguanjia.com/CDNFile/Share/WXShareV3_hyms.js"></script>
-    <script>
       var _mtac = {};
       (function() {
         if (!window.location.hostname.includes('localhost')) {
@@ -65,19 +54,6 @@
           mta.setAttribute("sid", "500695913");
           var s = document.getElementsByTagName("script")[0];
           s.parentNode.insertBefore(mta, s);
-
-          wx.onMenuShareTimeline({
-            title: title, // 分享标题
-            link: link, // 分享链接，统计二级下钻需在在url里加上CKTAG=mta_share.wechat_moments
-            imgUrl: imgUrl, // 分享图标
-            success: function () {
-              // 用户确认分享后执行的回调函数
-              MtaH5.clickShare('wechat_moments');  //这里加上h5分享代码
-            },
-            cancel: function () {
-              // 用户取消分享后执行的回调函数
-            }
-          });
         }
       })();
     </script>
