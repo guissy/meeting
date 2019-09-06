@@ -6,7 +6,7 @@ img {
 
 .page-loading,
 .bannerBox {
-    position: absolute;
+    position: relative;
     /*width: 100%;*/
     /*min-height: 1390px;*/
     background: #0683ff url(assets/bg0.png) no-repeat top center;

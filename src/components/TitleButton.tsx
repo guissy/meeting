@@ -7,7 +7,7 @@ interface Props {
 
 const TitleButton: React.FC<Props> = ({title, onClick}) => {
   const w = document.documentElement.clientWidth;
-  const fontSize = Math.min(Math.ceil(14 + (w - 375) / 40), 30);
+  const fontSize = Math.min(Math.ceil(14 + (w - 375) / 40), 14);
   return (
       <div className="title-button-container ball-scale" onClick={onClick}>
         <div className="border1" />

@@ -8,10 +8,13 @@ interface Props {
 
 const TitleMain: React.FC<Props> = ({}) => {
   return (
+    <>
+      <div className="title-main-margin"/>
       <div className="title-main">
         {/*<img src={h1_bg} className="h1-bg" />*/}
         <img src={h1_txt} className="h1-txt" />
       </div>
+    </>
   );
 };
 

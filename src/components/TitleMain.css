@@ -1,8 +1,11 @@
+.title-main-margin {
+    height: 100px;
+}
 .title-main {
     /*position: relative;*/
     width: 334px;
     height: 163px;
-    margin: 100px auto 0;
+    margin: 0 auto;
     text-align: center;
     background: url("../assets/h1_bg2.png") no-repeat center center;
     background-size: 100%;
@@ -15,9 +18,7 @@
     vertical-align: middle;
 }
 
-/*.h1-bg {*/
-/*    width: 100%;*/
-/*}*/
+
 .h1-txt {
     width: 184px;
     display: inline-block;
