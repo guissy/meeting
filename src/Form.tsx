@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import TitleButton from './components/TitleButton';
 import './Form.css';
 import h1_txt from './assets/h1_txt.png';
@@ -26,11 +26,15 @@ const Form: React.FC<Props> = ({ toHome }) => {
   const style = { height, backgroundSize: '100% ' + height + 'px'};
   const submit = () => {
     setFocus(false);
-    if (wx.trim()) {
+    const isZh = /[^\x00-\xff]/.test(wx);
+    const isSymbol = /[,.\\\/\[\]\!%\^\*\?\(\)\=\`\~\&:;"'<>\+\|\{\}\$\#]/.test(wx);
+    if (isZh || isSymbol) {
+      setMsg('请输入企业微信的英文ID');
+    } else if (wx.trim() === '') {
+      setMsg('微信名不能为空');
+    } else {
       post(wx.trim());
       setSubmited(true);
-    } else {
-      setMsg('微信名不能为空')
     }
   }
   const fixScrollTop = () => {
@@ -47,6 +51,11 @@ const Form: React.FC<Props> = ({ toHome }) => {
       window.removeEventListener('focusout', fixScrollTop);
     };
   }, [focus, wx, submited, msg]);
+  useEffect(() => {
+    if (submited) {
+      window.history.pushState({}, 'TSTS2019第12届腾讯安全技术峰会', '#success');
+    }
+  }, [submited]);
   return !submited ? (
     <form className="form-box" style={style} onSubmit={submit}>
       <img src={h1_txt} className="h1-txt2"/>

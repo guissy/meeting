@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import arrow from "./assets/images/arrow.png";
 import './App.css';
 import TitleBox from './components/TitleBox';
@@ -51,6 +51,20 @@ const App: React.FC<{}> = ({}) => {
   const [isForm, setIsForm] = useState(false);
   const toForm = React.useCallback(() => setIsForm(true), []);
   const toHome = React.useCallback(() => setIsForm(false), []);
+  useEffect(() => {
+    if (isForm) {
+      window.history.pushState({path: '#form'}, 'TSTS2019第12届腾讯安全技术峰会', '#form');
+    } else {
+      window.history.replaceState({path: '#'}, 'TSTS2019第12届腾讯安全技术峰会', '#');
+    }
+    const cb = (e: any) => {
+      setIsForm(e.state && e.state.path === '#form');
+    };
+    window.addEventListener('popstate', cb);
+    return () => {
+      window.removeEventListener('popstate', cb);
+    }
+  }, [isForm]);
   return (
     <Store.Provider value={{ isForm }}>
       <div className="main">

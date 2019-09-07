@@ -37,6 +37,7 @@
     position: absolute;
     bottom: 10px;
     border-bottom: 1px solid #FF5722;
+    transition: width 0.3s;
 }
 
 .body-box > .video-wrap > a {
@@ -47,6 +48,5 @@
 }
 
 .body-box > .video-wrap > video {
-    background: #666666;
-    margin: 20px auto 5px;
+    background: #1288B5 radial-gradient(145% 400% at 15% -28%, #1288B5 40%, #1F8FB7 40%, #1F8FB7 100%);
 }

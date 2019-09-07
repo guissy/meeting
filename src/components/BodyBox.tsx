@@ -21,7 +21,7 @@ const BodyBox: React.FC<Props> = ({ content }) => {
   useEffect(() => {
     if (playing) {
       timer = setInterval(() => {
-        setRate(ref.current.currentTime/ref.current.duration*100);
+        setRate(Math.ceil(ref.current.currentTime/ref.current.duration*100));
       });
     } else {
       clearInterval(timer);
@@ -38,7 +38,7 @@ const BodyBox: React.FC<Props> = ({ content }) => {
         </p>
       ))}
       <div className="video-wrap">
-        <video width="100%" autoPlay={false} loop={true} playsInline ref={ref} preload="auto"
+        <video width="100%" autoPlay={false} loop={true} controls={false} playsInline ref={ref} preload="auto"
                onClick={() => {
                  ref.current.pause();
                  setPlaying(false);
@@ -46,7 +46,7 @@ const BodyBox: React.FC<Props> = ({ content }) => {
                onEnded={() => {
                  setPlaying(false);
                }}>
-          <source src="video.mp4" type="video/mp4"/>
+          <source src="video1.mp4" type="video/mp4"/>
         </video>
         <div className="line" style={{width: rate+'%'}}/>
         {!playing && <a onClick={toPlay}><img src={playIcon} alt="play"/></a>}
