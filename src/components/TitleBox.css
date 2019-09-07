@@ -1,16 +1,24 @@
 .title-box-container {
-    /*position: relative;*/
-    width: 100px;
-    height: 52px;
-    margin: 0 auto;
+    width: 130px;
+    height: 46px;
+    margin: 38px auto 0;
     background: url('../assets/btn_bg.png') no-repeat center center;
     background-size: 100%;
 }
+.title-box-container.yiti {
+    width: 100px;
+}
 .title-border {
     position: absolute;
-    width: 100px;
-    height: 52px;
+    width: 130px;
+    height: 46px;
     z-index: 5;
+    border-left: 15px solid #0087ff;
+    border-right: 15px solid #0087ff;
+}
+.yiti .title-border {
+    width: 100px;
+    border: 0;
 }
 .title-text {
     width: 72px;

@@ -3,11 +3,12 @@ import './TitleBox.css';
 interface Props {
   img: string;
   style?: any;
+  className?: any;
 }
 
-const TitleBox: React.FC<Props> = ({img, style = {}}) => {
+const TitleBox: React.FC<Props> = ({img, style = {}, className = ""}) => {
   return (
-      <div className="title-box-container" style={style}>
+      <div className={"title-box-container "+className} style={style}>
         <div className="title-border">
           <div className="title-top"/>
           <div className="title-bottom"/>

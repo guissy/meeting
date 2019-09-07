@@ -12,7 +12,7 @@ const BodyBox: React.FC<Props> = ({ content }) => {
   const ref = React.useRef<HTMLVideoElement>(null as unknown as HTMLVideoElement);
   const [playing, setPlaying] = React.useState(false);
   const w = document.documentElement.clientWidth;
-  const fontSize = Math.min(Math.ceil(12 + (w - 375) / 81), 18);
+  // const fontSize = 12; //Math.min(Math.ceil(12 + (w - 375) / 30), 28);
   const [rate, setRate] = React.useState(0);
   const toPlay = () => {
     ref.current.play();
@@ -32,11 +32,13 @@ const BodyBox: React.FC<Props> = ({ content }) => {
   }, [playing]);
   return (
     <div className="body-box">
-      {content.split('\n').map(v => v.trim()).map((v, i) => (
-        <p key={i} style={{ fontSize }}>
-          {v}
-        </p>
-      ))}
+      <p>
+        {content.split('\n').map(v => v.trim()).map((v, i) => (
+          <span key={i}>
+            {v}
+          </span>
+        ))}
+      </p>
       <div className="video-wrap">
         <video width="100%" autoPlay={false} loop={true} controls={false} playsInline ref={ref} preload="auto"
                onClick={() => {

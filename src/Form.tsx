@@ -98,6 +98,7 @@ const Form: React.FC<Props> = ({ toHome }) => {
         setSubmited(false);
         toHome();
       }}/>
+      <img className="company-logo bottom" src={companyLogo} alt=""/>
       <footer style={{ width: '100%', height: '1px' }}>
         {/*不能有margin-bottom*/}
       </footer>

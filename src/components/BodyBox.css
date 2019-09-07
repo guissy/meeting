@@ -1,9 +1,8 @@
 .body-box {
     position: relative;
-    margin: -19px auto 0;
+    margin: -19px auto 30px;
     width: calc(100% - 38px);
-    /*min-height: 296px;*/
-    padding: 24px 19px;
+    padding: 26px 19px 22px;
     border: 5px solid #39B8FF;
     border-image: linear-gradient(90deg, #72EDDB 0%, #39B8FF 100%) 10 10 stretch;
     z-index: -1;
@@ -23,12 +22,24 @@
 .body-box > p {
     color: #ffffff;
     font-size: 12px;
-    text-align: center;
+    /* width: 200%; */
+    word-break: keep-all;
+    white-space: nowrap;
+    /* transform: scale(0.82) translateX(-11%); */
+    transform: scale(0.85);
+    /* transform-origin: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.body-box > p > span {
+    display: block;
 }
 
 .body-box > .video-wrap {
     position: relative;
-    margin: 20px auto 5px;
+    margin: 15px auto 0px;
 }
 .body-box > .video-wrap > .line {
     display: block;

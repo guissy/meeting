@@ -1,10 +1,9 @@
 .title-main-margin {
-    height: 100px;
+    height: 25px;
 }
 .title-main {
-    /*position: relative;*/
-    width: 334px;
-    height: 163px;
+    width: 342px;
+    height: 168px;
     margin: 0 auto;
     text-align: center;
     background: url("../assets/h1_bg2.png") no-repeat center center;

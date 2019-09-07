@@ -7,8 +7,6 @@ img {
 .page-loading,
 .bannerBox {
     position: relative;
-    /*width: 100%;*/
-    /*min-height: 1390px;*/
     background: #0683ff url(assets/bg0.png) no-repeat top center;
     background-size: 100% 101%;
     z-index: 99999;
@@ -23,11 +21,18 @@ img {
 }
 
 .time-place {
-    margin: 22px;
+    margin: 3px 0 30px;
     text-align: center;
     color: #ffffff;
     font-size: 13px;
     text-shadow: 1px 1px 1px #0a74d3;
+    font-weight: bold;
+}
+.time-place > time {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 22px;
+    transform: scaleY(1.1);
 }
 
 .free-btn1 {
@@ -60,14 +65,13 @@ img {
 }
 
 .body2 {
-    padding: 15px 15px 0 15px;
-    width: 100%;
-    height: auto;
+    /*transform: scale(2.5) translate(20.5%, -14%);*/
+    margin-bottom: -42px;
 }
 .company-logo {
     display: block;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 30px 0 60px;
     width: 70%;
 }
 
