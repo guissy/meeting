@@ -22,12 +22,10 @@
 .body-box > p {
     color: #ffffff;
     font-size: 12px;
-    /* width: 200%; */
+    line-height: 20px;
     word-break: keep-all;
     white-space: nowrap;
-    /* transform: scale(0.82) translateX(-11%); */
     transform: scale(0.85);
-    /* transform-origin: center; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +37,7 @@
 
 .body-box > .video-wrap {
     position: relative;
-    margin: 15px auto 0px;
+    margin: 15px auto 0;
 }
 .body-box > .video-wrap > .line {
     display: block;
@@ -51,10 +49,14 @@
     transition: width 0.3s;
 }
 
-.body-box > .video-wrap > a {
+.body-box > .video-wrap > button {
     position: absolute;
     left: 50%;
     top: 50%;
+    height: 60px;
+    width: 60px;
+    background: none;
+    border: 0;
     transform: translate(-50%, -50%) scale(0.8);
 }
 

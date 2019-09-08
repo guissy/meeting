@@ -19,20 +19,29 @@
     background: 0 0;
     box-shadow: none;
     border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 19820919;
+    filter: invert(1);
 }
+
 .layui-layer, .layui-layer-shade {
     position: fixed;
     _position: absolute;
     pointer-events: auto;
 }
+
 .layui-layer-content {
     position: relative;
 }
+
 .layui-layer-loading .layui-layer-content {
     width: 60px;
-    height: 24px;
-    background: url(../assets/images/loading-0.gif) no-repeat;
+    height: 60px;
+    background: url(../assets/loading.svg) no-repeat;
 }
+
 .layui-layer-setwin {
     position: absolute;
     right: 15px;
@@ -43,12 +52,12 @@
 }
 
 
-
 /** 弹出消息 */
 .layui-layer-dialog {
     background-color: #fff;
     border-radius: 2px;
 }
+
 .layui-layer-dialog .layui-layer-padding {
     padding: 20px 20px 20px 55px;
     text-align: left;
@@ -57,9 +66,14 @@
 .layui-layer-ico.layui-layer-ico1 {
     background-position: -30px 0;
 }
+.layui-layer-ico.layui-layer-ico5 {
+    background-position: -150px 0;
+}
+
 .layui-layer-ico {
     background: url(../assets/images/icon.png) no-repeat;
 }
+
 .layui-layer-dialog .layui-layer-content .layui-layer-ico {
     position: absolute;
     top: 16px;
@@ -67,10 +81,12 @@
     width: 30px;
     height: 30px;
 }
+
 .layui-layer-dialog .layui-layer-padding {
     padding: 20px 20px 20px 55px;
     text-align: left;
 }
+
 .layui-layer-dialog .layui-layer-content {
     position: relative;
     /*padding: 20px;*/
@@ -81,8 +97,9 @@
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 .layui-layer-msg {
-    min-width: 180px;
+    min-width: 200px;
     border: 1px solid #D3D4D3;
     box-shadow: none;
     z-index: 19891027;

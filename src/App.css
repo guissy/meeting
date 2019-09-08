@@ -18,6 +18,7 @@ img {
     font-size: 30px;
     color: #F8F8F8;
     text-shadow: 0 0 6px #00ffff;
+    height: 100vh;
 }
 
 .time-place {

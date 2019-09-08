@@ -11,8 +11,6 @@ let timer: any;
 const BodyBox: React.FC<Props> = ({ content }) => {
   const ref = React.useRef<HTMLVideoElement>(null as unknown as HTMLVideoElement);
   const [playing, setPlaying] = React.useState(false);
-  const w = document.documentElement.clientWidth;
-  // const fontSize = 12; //Math.min(Math.ceil(12 + (w - 375) / 30), 28);
   const [rate, setRate] = React.useState(0);
   const toPlay = () => {
     ref.current.play();
@@ -51,7 +49,7 @@ const BodyBox: React.FC<Props> = ({ content }) => {
           <source src="video1.mp4" type="video/mp4"/>
         </video>
         <div className="line" style={{width: rate+'%'}}/>
-        {!playing && <a onClick={toPlay}><img src={playIcon} alt="play"/></a>}
+        {!playing && <button onClick={toPlay}><img src={playIcon} alt="play"/></button>}
       </div>
     </div>
   );
