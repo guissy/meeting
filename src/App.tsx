@@ -10,6 +10,8 @@ import TitleMain from './components/TitleMain';
 import BodyBox from './components/BodyBox';
 import TitleButton from './components/TitleButton';
 import Form from './Form';
+import YiTi from './components/YiTi';
+import YiTiBox from './components/YiTiBox';
 
 interface StoreEntity {
   isForm: boolean;
@@ -48,6 +50,7 @@ const Main: React.FC<{ toForm: () => void }> = ({ toForm }) => {
       {/*峰会议题*/}
       <TitleBox img={title1} className="yiti" style={{marginTop: '38px', border: 0}}/>
       <img className="body2" src={body2} alt="meeting schedule" />
+      {/*<YiTiBox />*/}
 
       {/*报名按钮*/}
       <TitleButton title="点击报名" onClick={toForm}/>

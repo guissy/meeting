@@ -112,7 +112,7 @@
         <tspan xml:space="preserve">【浅谈金融业务主机入侵防御体系建设】CDG平台研发部  fowlerzhu(朱峰)</tspan>
     </text>
     <text class="q" transform="translate(244.93 1483.97)">【Binary Analysis Platform - Java and Dalvik virtual machines】
-        <tspan x="0" y="27.88" xml:space="preserve">  科恩实验室  Anton ,Kochkov</tspan>
+        <tspan x="0" y="27.88" xml:space="preserve">  CSIG科恩实验室  akochkov(ANTON KOCHKOV)</tspan>
     </text>
     <circle class="r" cx="227.95" cy="1029.15" r="8.63"/>
     <circle class="r" cx="228.39" cy="1093.3" r="8.63"/>

@@ -2,7 +2,7 @@ import React from 'react';
 import './YiTi.css';
 
 const YiTi = () => (
-  <svg viewBox="0 0 941.38 2016.03" className="yiti">
+  <svg viewBox="98 880 748 846">
     <defs>
       <linearGradient
         id="prefix__f"
@@ -252,7 +252,7 @@ const YiTi = () => (
         '【Binary Analysis Platform - Java and Dalvik virtual machines】'
       }
       <tspan x={0} y={27.88}>
-        {'  科恩实验室  Anton ,Kochkov'}
+        {'  CSIG科恩实验室  akochkov(ANTON KOCHKOV)'}
       </tspan>
     </text>
     <circle className="prefix__r" cx={227.95} cy={1029.15} r={8.63} />
