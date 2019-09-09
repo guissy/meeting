@@ -47,7 +47,10 @@ const Home: React.FC<Props> = ({ setHash }) => {
       {/*<YiTiBox />*/}
 
       {/*报名按钮*/}
-      <TitleButton title="点击报名" onClick={() => setHash('#form')}/>
+      <TitleButton title="点击报名" onClick={() => {
+        setHash('#form');
+        // window.location.href = 'https://oa.m.tencent.com/an:m_jf_oa/act/sign_result';
+      }}/>
       <img className="company-logo" src={companyLogo} alt="tencent company"/>
     </div>
   </>

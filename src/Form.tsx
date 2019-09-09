@@ -7,21 +7,22 @@ import MsgBox from './components/MsgBox';
 
 interface Props {
   setHash: (hash: string) => void;
+  height: number;
 }
 
 function post(wx: string) {
   return fetch('/wx/' + wx).then(v => v.json());
 }
 
-const Form: React.FC<Props> = ({ setHash }) => {
+
+const Form: React.FC<Props> = ({ setHash, height }) => {
   const [focus, setFocus] = useState(false);
   const [wx, setWx] = useState('');
   const [submited, setSubmited] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [msg, setMsg] = useState('');
-  const maxHeight = window.innerHeight;
-  const [height, setHeight] = useState(maxHeight);
-  const paddingTop = height - 630;
+  const [maxHeight, setMaxHeight] = useState(height);
+  const paddingTop = Math.max(height - 580, 0);
   const style = { height, backgroundSize: '100% ' + height + 'px' };
   const submit = () => {
     setFocus(false);
@@ -30,7 +31,7 @@ const Form: React.FC<Props> = ({ setHash }) => {
     if (isZh || isSymbol) {
       setMsg('请输入企业微信的英文ID');
     } else if (wx.trim() === '') {
-      setMsg('微信名不能为空');
+      setMsg('请输入企业微信的英文ID');
     } else {
       setIsSubmitting(true);
       setSubmited(true);
@@ -51,20 +52,22 @@ const Form: React.FC<Props> = ({ setHash }) => {
       //   })
     }
   }
+  const fixScrollTop = useCallback(() => {
+    setMaxHeight(height + Math.random());
+  }, []);
   useEffect(() => {
-    const fixScrollTop = () => {
-      setHeight(maxHeight);
-    }
     let timer: any;
     if (!focus || msg || submited) {
       timer = setTimeout(fixScrollTop);
+    }
+    if (focus) {
       window.addEventListener('focusout', fixScrollTop);
     }
     return () => {
       clearTimeout(timer);
       window.removeEventListener('focusout', fixScrollTop);
     };
-  }, [focus, wx, submited, msg]);
+  }, [focus, wx, submited, msg, fixScrollTop]);
   useEffect(() => {
     if (submited) {
       window.history.pushState({}, 'TSTS2019第12届腾讯安全技术峰会', '#success');
@@ -72,7 +75,7 @@ const Form: React.FC<Props> = ({ setHash }) => {
   }, [submited]);
   const setMsgCb = useCallback(setMsg, [msg]);
   return (
-    <form className="form-box" style={style} onSubmit={submit}>
+    <form className="form-box" style={style} onSubmit={submit} data-height={{maxHeight}}>
       <img src={h1_txt} className="h1-txt2" alt="title"/>
       <p className="input-label">请输入您的企业微信英文名</p>
       <div className={"input-wrap" + (focus || wx ? ' editing' : '')}>

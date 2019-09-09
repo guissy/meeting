@@ -62,5 +62,6 @@
 }
 
 .body-box > .video-wrap > video {
+    object-fit:fill;
     background: #1288B5 radial-gradient(145% 400% at 15% -28%, #1288B5 40%, #1F8FB7 40%, #1F8FB7 100%);
 }

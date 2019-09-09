@@ -6,10 +6,10 @@ import './Form.css';
 interface Props {
   setHash: (hash: string) => void;
   hash: string;
+  height: number;
 }
 
-const Result: React.FC<Props> = ({ setHash, hash }) => {
-  const [height] = useState(window.innerHeight);
+const Result: React.FC<Props> = ({ setHash, hash, height }) => {
   const style = { height, backgroundSize: '100% ' + height + 'px' };
   let title = '信息已提交';
   let msg = '我们会企业微信联系报名成功的小伙伴';

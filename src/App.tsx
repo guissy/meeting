@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState, lazy } from 'react';
+import React, { Suspense, useEffect, useState, lazy, useCallback } from 'react';
 import './App.css';
 
 interface StoreEntity {
@@ -13,6 +13,10 @@ const Result = lazy(() => import('./Result'));
 
 const App: React.FC = () => {
   const [hash, setHash] = useState(window.location.hash);
+  const [height, setHeight] = useState(window.innerHeight);
+  const resize = useCallback(() => {
+    setHeight(Math.max(height, window.innerHeight));
+  }, []);
   useEffect(() => {
     if (hash === '#form') {
       window.history.pushState({ path: '#form' }, 'TSTS2019第12届腾讯安全技术峰会', '#form');
@@ -23,8 +27,10 @@ const App: React.FC = () => {
       setHash(e.state && e.state.path);
     };
     window.addEventListener('popstate', cb);
+    window.addEventListener('resize', resize);
     return () => {
       window.removeEventListener('popstate', cb);
+      window.removeEventListener('resize', resize);
     }
   }, [hash]);
   return (
@@ -32,15 +38,15 @@ const App: React.FC = () => {
       <div className="main">
         {(hash === '#'|| hash === '') &&
         <Suspense fallback={<div className="page-loading">Loading...</div>}>
-          <Home setHash={setHash}/>
+          <Home setHash={setHash} />
         </Suspense>}
         {hash === '#form' &&
         <Suspense fallback={<div className="page-loading">Loading...</div>}>
-          <Form setHash={setHash}/>
+          <Form setHash={setHash} height={height}/>
         </Suspense>}
         {(hash === '#success' || hash === '#fail' || hash === '#repeat') &&
         <Suspense fallback={<div className="page-loading">Loading...</div>}>
-          <Result setHash={setHash} hash={hash} />
+          <Result setHash={setHash} hash={hash} height={height}/>
         </Suspense>}
       </div>
     </Store.Provider>

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import './BodyBox.css';
 import playIcon from '../assets/video-play.svg';
+// @ts-ignore
+import videoUrl from '../assets/video1.mp4';
 
 interface Props {
   content: string;
@@ -38,7 +40,12 @@ const BodyBox: React.FC<Props> = ({ content }) => {
         ))}
       </p>
       <div className="video-wrap">
-        <video width="100%" autoPlay={false} loop={true} controls={false} playsInline ref={ref} preload="auto"
+        <video width="100%" autoPlay={false} loop={true} controls={false}
+               playsInline={true}
+               ref={ref} preload="auto"
+               x5-video-player-type="h5" /*启用H5播放器,是wechat安卓版特性*/
+               x5-video-orientation="landscape" /*播放器的方向，landscape横屏，portraint竖屏，默认值为竖屏*/
+               x5-video-player-fullscreen="true"
                onClick={() => {
                  ref.current.pause();
                  setPlaying(false);
@@ -46,7 +53,7 @@ const BodyBox: React.FC<Props> = ({ content }) => {
                onEnded={() => {
                  setPlaying(false);
                }}>
-          <source src="video1.mp4" type="video/mp4"/>
+          <source src={videoUrl} type="video/mp4"/>
         </video>
         <div className="line" style={{width: rate+'%'}}/>
         {!playing && <button onClick={toPlay}><img src={playIcon} alt="play"/></button>}
