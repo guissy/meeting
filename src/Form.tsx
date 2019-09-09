@@ -71,7 +71,7 @@ const Form: React.FC<Props> = ({ toHome }) => {
   return !submited ? (
     <form className="form-box" style={style} onSubmit={submit}>
       <img src={h1_txt} className="h1-txt2" alt="title" />
-      <p className="input-label">请输入您的企业微信名</p>
+      <p className="input-label">请输入您的企业微信英文名</p>
       <div className={"input-wrap" + (focus || wx ? ' editing' : '')}>
         <input
           onFocus={() => {
