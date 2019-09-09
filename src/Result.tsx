@@ -19,7 +19,7 @@ const Result: React.FC<Props> = ({ setHash, hash, height }) => {
     title = '报名失败';
     msg = '请用您OA绑定的微信号登陆进行报名！';
   } else if (hash === '#repeat') {
-    title = '报名失败';
+    title = '重复提交';
     msg = '您已报名，请勿重复提交！';
   }
   return (

@@ -48,9 +48,10 @@ const Home: React.FC<Props> = ({ setHash }) => {
 
       {/*报名按钮*/}
       <TitleButton title="点击报名" onClick={() => {
-        setHash('#form');
-        // window.location.href = 'https://oa.m.tencent.com/an:m_jf_oa/act/sign_result';
+        // setHash('#form');
+        window.location.href = 'https://oa.m.tencent.com/an:m_jf_oa/act/sign_result';
       }}/>
+      <p className="note">（此会议仅针对腾讯员工开放）</p>
       <img className="company-logo" src={companyLogo} alt="tencent company"/>
     </div>
   </>

@@ -66,6 +66,14 @@ img {
     width: 70%;
 }
 
+.note {
+    margin: 10px auto 10px;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    transform: scale(0.7);
+}
+
 @keyframes bounceIn {
     from,
     20%,
