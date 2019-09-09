@@ -1,0 +1,125 @@
+img {
+    border: none;
+    max-width: 100%;
+    pointer-events: none;
+}
+
+.bannerBox {
+    position: relative;
+    background: #0683ff url(assets/bg0.png) no-repeat top center;
+    background-size: 100% 101%;
+    z-index: 99999;
+}
+
+.time-place {
+    margin: 3px 0 30px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #0a74d3;
+    font-weight: bold;
+}
+.time-place > time {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 22px;
+    transform: scaleY(1.1);
+}
+
+.free-btn1 {
+    bottom: 12.5%;
+}
+
+.free-btn {
+    position: absolute;
+    display: block;
+    width: 33.33%;
+    z-index: 1000;
+    left: 33.33%;
+    -webkit-animation: bounceIn 2s infinite ease-in-out forwards;
+    animation: bounceIn 2s infinite ease-in-out forwards;
+}
+
+.arrow-box {
+    margin: 0 auto;
+    width: 50%;
+    z-index: 900;
+}
+
+.arrow-box .arrow {
+    z-index: 999;
+    animation: start 1.5s infinite ease-in-out;
+    display: block;
+    margin: 15px auto 0 auto;
+    width: 20px;
+    height: 15px;
+}
+
+.body2 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.company-logo {
+    display: block;
+    margin: 0 auto;
+    padding: 30px 0 60px;
+    width: 70%;
+}
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 1;
+        transform: scale3d(0.6, 0.6, 0.6);
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes start {
+
+    0%,
+    30% {
+        opacity: 0;
+        -webkit-transform: translate(0, -8px);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0, 10px);
+    }
+}
