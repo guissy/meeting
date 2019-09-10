@@ -6,6 +6,8 @@
     border: 5px solid #39B8FF;
     border-image: linear-gradient(90deg, #72EDDB 0%, #39B8FF 100%) 10 10 stretch;
     z-index: -1;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .body-box::after {

@@ -30,9 +30,14 @@ const BodyBox: React.FC<Props> = ({ content }) => {
       clearInterval(timer);
     }
   }, [playing]);
+  const w = Math.min(750, window.innerWidth);
+  const s = (w - 375) / 375 * (1.55 - 0.85) + 0.85;
+  const m1 = (w - 375) / 375 * 20;
+  const m2 = (w - 375) / 375 * 25;
+  const style = {transform: `scale(${s})`, marginTop: m1, marginBottom: m2};
   return (
     <div className="body-box">
-      <p>
+      <p style={style}>
         {content.split('\n').map(v => v.trim()).map((v, i) => (
           <span key={i}>
             {v}

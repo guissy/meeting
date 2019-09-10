@@ -93,20 +93,13 @@
     /*padding-top: 80px;*/
 }
 .success-bottom {
-    position: fixed;
-    bottom: 0;
-    width: 70%;
-    margin: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*width: 70%;*/
+    /*margin: 0;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
 }
-@media screen and (max-height: 640px) {
-    .bottom {
-        width: 55%;
-        margin-top: 0;
-    }
-}
-
 
 .message-box {
     padding-top: 90px;
@@ -135,5 +128,20 @@
     100%
     {
         opacity: 1;
+    }
+}
+
+
+@media screen and (orientation: landscape) {
+    /* 横屏 */
+    .message-box {
+        padding-top: 60px;
+    }
+    .message-box .input-wrap {
+        margin-bottom: 30px;
+    }
+    .success-bottom {
+        max-width: 230px;
+        padding-bottom: 0;
     }
 }

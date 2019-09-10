@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TitleButton from './components/TitleButton';
 import companyLogo from './assets/compony_logo.png';
 import './Form.css';
@@ -22,6 +22,7 @@ const Result: React.FC<Props> = ({ setHash, hash, height }) => {
     title = '重复提交';
     msg = '您已报名，请勿重复提交！';
   }
+  const paddingTop = Math.max(window.orientation > 0 ? 20 : height - 450, 0);
   return (
     <div className="message-box" style={style}>
       <p className="input-label">{title}</p>
@@ -31,9 +32,11 @@ const Result: React.FC<Props> = ({ setHash, hash, height }) => {
       </div>
       <TitleButton title="返回首页" onClick={() => {
         // window.history.go(-1);
-        setHash('#');
+        // setHash('#');
+        const homeUrl = window.location.href.split('#').shift() || "";
+        window.location.replace(homeUrl)
       }}/>
-      <img className="company-logo success-bottom" src={companyLogo} alt=""/>
+      <img className="company-logo success-bottom" src={companyLogo} alt="" style={{ paddingTop }}/>
       <footer style={{ width: '100%', height: 1 }}>
         {/*不能有margin-bottom*/}
       </footer>

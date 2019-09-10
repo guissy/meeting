@@ -10,9 +10,9 @@ interface Props {
   height: number;
 }
 
-function post(wx: string) {
-  return fetch('/wx/' + wx).then(v => v.json());
-}
+// function post(wx: string) {
+//   return fetch('/wx/' + wx).then(v => v.json());
+// }
 
 
 const Form: React.FC<Props> = ({ setHash, height }) => {
@@ -54,7 +54,7 @@ const Form: React.FC<Props> = ({ setHash, height }) => {
   }
   const fixScrollTop = useCallback(() => {
     setMaxHeight(height + Math.random());
-  }, []);
+  }, [height]);
   useEffect(() => {
     let timer: any;
     if (!focus || msg || submited) {

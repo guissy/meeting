@@ -16,23 +16,36 @@ const App: React.FC = () => {
   const [height, setHeight] = useState(window.innerHeight);
   const resize = useCallback(() => {
     setHeight(Math.max(height, window.innerHeight));
-  }, []);
+  }, [height]);
+  const resizeForce = useCallback(() => {
+    setHeight(window.innerHeight);
+  }, [height]);
   useEffect(() => {
-    if (hash === '#form') {
-      window.history.pushState({ path: '#form' }, 'TSTS2019第12届腾讯安全技术峰会', '#form');
-    } else {
-      window.history.replaceState({ path: '#' }, 'TSTS2019第12届腾讯安全技术峰会', '#');
+    if (hash !== window.location.hash) {
+      if (hash === '#' || hash === '') {
+        window.history.replaceState({ path: '#' }, 'TSTS2019第12届腾讯安全技术峰会', '#');
+      } else {
+        window.history.pushState({ path: hash }, 'TSTS2019第12届腾讯安全技术峰会', hash);
+      }
     }
     const cb = (e: any) => {
       setHash(e.state && e.state.path);
     };
     window.addEventListener('popstate', cb);
     window.addEventListener('resize', resize);
+    window.addEventListener('onorientationchange', resizeForce);
+    if (window.screen && window.screen.orientation) {
+      window.screen.orientation.lock("natural");
+    }
+    if (hash == null) {
+      setHash(window.location.hash);
+    }
     return () => {
       window.removeEventListener('popstate', cb);
       window.removeEventListener('resize', resize);
+      window.removeEventListener('onorientationchange', resizeForce);
     }
-  }, [hash]);
+  }, [hash, resize, resizeForce]);
   return (
     <Store.Provider value={{ hash }}>
       <div className="main">
